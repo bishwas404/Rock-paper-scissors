@@ -1,0 +1,136 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(57, 56, 56);
+}
+header{
+  display: flex;
+  padding: 14px;
+  background-color: white;
+  color: black;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+header h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+}
+
+
+#sound-toggle{
+  padding: 5px;
+  border: none;
+  background-color: rgb(57, 56, 56);
+  color: white;
+  border-radius: 5px;
+  transition: 100ms ease;
+
+}
+#sound-toggle:hover{
+  transform: scale(1.2);
+}
+.score-board{
+  margin: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+
+.selected{
+  margin: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas:
+  'col1 col2'
+  'col3 col4';
+  gap: 20px;
+  background-color: rgb(133, 129, 129);
+  color: white;
+  border: 2px solid white;
+}
+
+.selection{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.selection:nth-child(1){
+  grid-area: col1;
+}
+
+.selection:nth-child(2){
+  grid-area: col2;
+}
+
+.selection:nth-child(3){
+  grid-area: col3;
+}
+
+.selection:nth-child(4){
+  grid-area: col4;
+}
+
+#user-selected{
+  font-size: 8rem;
+}
+#computer-selected{
+  font-size: 8rem;
+}
+
+.choices{
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.choice{
+  font-size: 5rem;
+  transition: 100ms ease;
+  cursor: pointer;
+}
+.choice:hover{
+  transform: scale(1.2);
+}
+.action-text{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.result-message{
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+  opacity: 0;
+  border-radius: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media(max-width: 768px){
+  .selected{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'col1'
+    'col3'
+    'col2'
+    'col4';
+  }
+}

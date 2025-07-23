@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>Rock Paper Scissors</h1>
+      <button id="sound-toggle">Sound on</button>
+    </header>
+    <div class="score-board">
+      <div class="badge" id="you-badge">You</div>
+      <span id="user-score">0</span>:<span id="computer-score">0</span>
+      <div class="badge" id="computer-badge">Computer</div>
+
+    </div>
+    <div class="selected">
+      <div class="selection" id="user-text">You selected</div>
+      <div class="selection" id="computer-text">Computer selected</div>
+      <div class="selection" id="user-selected">
+        --
+      </div>
+      <div class="selection" id="computer-selected">
+        --
+      </div>
+    </div>
+
+    <div class="result-message"></div>
+
+    <div class="action-text">
+      <h2>Make your choice</h2>
+    </div>
+
+    <div class="choices">
+      <div class="choice" id="rock">
+        ✊🏻
+      </div>
+      <div class="choice" id="paper">
+        🖐🏻
+      </div>
+      <div class="choice" id="scissors" >
+        ✌🏻
+      </div>
+    </div>
+  </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
